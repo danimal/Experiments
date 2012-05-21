@@ -72,14 +72,16 @@
     while (side >= 30.0) {
         UIView *aView = [UIView new];
         
+        double theValue = 15.0 * count;
         if ((count % 2) != 0) {
             // odd views, black and smaller inset
             [aView setBackgroundColor:black];
         } else {
             // even views, white and larger inset
             [aView setBackgroundColor:white];
+            side -= 15;
+            theValue += 7.5;
         }
-        double theValue = 15.0 * count;
         [aView setFrame:CGRectMake((self.view.frame.size.width / 2) - 256.0 + theValue,
                                    (self.view.frame.size.height / 2) - 256.0 + theValue,
                                    side,
